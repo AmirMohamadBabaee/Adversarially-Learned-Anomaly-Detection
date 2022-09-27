@@ -559,7 +559,6 @@ def train_and_test(dataset, nb_epochs, degree, random_seed, label,
 
 def run(args):
     """ Runs the training process"""
-    os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
     gpus = tf.config.experimental.list_physical_devices('GPU')
     tf.compat.v1.config.experimental.set_visible_devices(gpus[0], 'GPU')
     with tf.Graph().as_default():
