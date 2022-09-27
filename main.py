@@ -14,7 +14,7 @@ console = logging.StreamHandler()
 console.setLevel(logging.INFO)
 console.setFormatter(logging.Formatter('[%(asctime)s %(levelname)-3s @%(name)s] %(message)s', datefmt='%H:%M:%S'))
 logging.basicConfig(level=logging.DEBUG, handlers=[console])
-logging.getLogger("tensorflow").setLevel(logging.WARNING)
+logging.getLogger("tensorflow").setLevel(logging.ERROR)
 logger = logging.getLogger("AnomalyDetection")
 
 
